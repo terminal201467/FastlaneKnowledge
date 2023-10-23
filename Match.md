@@ -1,3 +1,5 @@
+# Match
+
 Fastlane中的match是一个自动化工具，用于管理和生成iOS和Android应用程序的代码签名和证书。它的主要目的是简化应用程序的签名流程，确保您的应用程序在发布到App Store或Google Play时使用正确的签名证书。
 
 具体来说，match可以执行以下任务：
@@ -12,7 +14,7 @@ Fastlane中的match是一个自动化工具，用于管理和生成iOS和Android
 
 通过使用match，开发团队可以节省时间并减少与证书管理相关的问题，从而更容易地维护和部署应用程序。此外，它还提供了一种方式来安全地共享证书和密钥，以确保团队成员能够协同工作，而不必共享敏感的证书信息。
 
-'''
+```
 lane :release do
   match(
     type: "appstore", # 选择要生成的证书类型，可以是appstore或ad-hoc等
@@ -21,14 +23,14 @@ lane :release do
     keychain_password: "your_keychain_password", # 设置钥匙串的密码
   )
 
-  # 添加其他发布任务，如构建和上传到App Store的步骤
 end
+```
 
-'''
+
 在终端中运行以下命令执行match任务：
-'''
-fastlane release
-'''
+
+`fastlane release`
+
 
 match会执行以下操作：
 
