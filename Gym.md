@@ -4,13 +4,13 @@
 
 意义：
 
-gym 插件用于自动化 iOS 应用程序的构建过程。它执行以下任务：
+1. gym 插件用于自动化 iOS 应用程序的构建过程。它执行以下任务：
 
-编译应用程序：gym 使用 Xcode 或其他相关工具编译你的 iOS 应用程序源代码，将其转化为可执行的二进制文件。
+2. 编译应用程序：gym 使用 Xcode 或其他相关工具编译你的 iOS 应用程序源代码，将其转化为可执行的二进制文件。
 
-生成归档：gym 生成一个应用程序的归档文件（Archive），这是一种已经编译和打包的应用程序，用于后续的分发或提交到 App Store。
+3. 生成归档：gym 生成一个应用程序的归档文件（Archive），这是一种已经编译和打包的应用程序，用于后续的分发或提交到 App Store。
 
-自动签名：gym 可以自动签名你的应用程序，以便后续的部署和分发。
+4. 自动签名：gym 可以自动签名你的应用程序，以便后续的部署和分发。
 
 用法：
 
@@ -34,12 +34,11 @@ lane :build_and_archive do
 end
 
 ```
-scheme：指定你的应用程序的 scheme 名称。
 
-configuration：通常设置为 "Release"，表示使用 Release 构建配置。
+1. scheme：指定你的应用程序的 scheme 名称。
+1. configuration：通常设置为 "Release"，表示使用 Release 构建配置。
+1. export_method：指定导出方法，常用选项包括 "app-store"（用于提交到 App Store）和 "ad-hoc"（用于 Ad-Hoc 分发）。
+1. export_options：一个包含导出选项的哈希表，用于进一步配置构建行为。你可以控制是否上传
 
-export_method：指定导出方法，常用选项包括 "app-store"（用于提交到 App Store）和 "ad-hoc"（用于 Ad-Hoc 分发）。
-
-export_options：一个包含导出选项的哈希表，用于进一步配置构建行为。你可以控制是否上传 Bitcode、上传符号、设置 provisioning profiles 等。
-
+Bitcode、上传符号、设置 provisioning profiles 等。
 通过使用 gym 插件，你可以轻松地将构建和归档应用程序的任务自动化，无需手动执行复杂的构建步骤。这有助于提高工作流的效率，并减少人为错误。
